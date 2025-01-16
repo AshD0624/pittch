@@ -253,6 +253,50 @@ background-position: center center;
 .slider_section .carousel-item {
   min-height: 500px;
 }
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot
+{
+  color: #222222;
+  align-self: center;
+}
+.owl-carousel .owl-nav {
+  opacity: 1 !important;
+}
+
+.owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity .2s ease;
+  border-radius: 30px;
+}
+
+.owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #869791;
+}
+#carouseltopbanner.owl-nav { display: block !important; }
+#carouseltopbanner.owl-carousel .owl-prev.disabled,
+#carouseltopbanner.owl-carousel .owl-next.disabled{
+    pointer-events: none;
+    opacity: 0.2;
+  }
+
+  #carouseltopbanner.owl-carousel .prev-slide{
+      background: url(../images/nav-icon.png) no-repeat scroll 0 0;
+      left: -33px;
+  }
+  #carouseltopbanner.owl-carousel .next-slide{
+      background: url(../images/nav-icon.png) no-repeat scroll -24px 0px;
+      right: -33px;
+  }
+  #carouseltopbanner.owl-carousel .prev-slide:hover{
+     background-position: 0px -53px;
+  }
+  #carouseltopbanner.owl-carousel .next-slide:hover{
+    background-position: -24px -53px;
+  }
 
 .slider_section #carouselExampleIndicators {
   bottom: 0;
