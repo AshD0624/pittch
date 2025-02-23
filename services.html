@@ -24,10 +24,107 @@
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+    .approach-container {
+              display: grid;
+              grid-template-columns: max-content;
+              gap: 15px;
+              padding: 40px 10px;
+              justify-items: center;
+              align-items: center;
+              position: relative;
+          }
+  
+          .center-circle {
+              grid-column: span 4;
+              
+              display: flex;
+              align-items: center;
+              justify-content: center;
+             
+              font-weight: bold;
+              text-transform: uppercase;
+              background: white;
+              transition: transform 0.3s ease-in-out;
+              animation: fadeIn 1s ease-in-out;
+          }
+  
+          .center-circle:hover {
+              transform: scale(1.15);
+          }
+          
+          .service-icon:hover {
+              transform: scale(1.15);
+          }
+
+          .highlight { color: red; }
+  
+          .approach-item {
+              width: 250px;
+              max-width: 100%;
+              text-align: center;
+              padding:25px 15px;
+              background: white;
+              border-radius: 10px;
+              box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+              opacity: 0;
+              transform: translateY(20px);
+              animation: fadeInUp 1s ease-in-out forwards;
+          }
+  
+          .approach-item:nth-child(2) { animation-delay: 0.3s; }
+          .approach-item:nth-child(3) { animation-delay: 0.6s; }
+          .approach-item:nth-child(4) { animation-delay: 0.9s; }
+          .approach-item:nth-child(5) { animation-delay: 1.2s; }
+  
+          @keyframes fadeIn {
+              from { opacity: 0; }
+              to { opacity: 1; }
+          }
+  
+          @keyframes fadeInUp {
+              from { opacity: 0; transform: translateY(20px); }
+              to { opacity: 1; transform: translateY(0); }
+          }
+  
+          /* Mobile View */
+          @media (max-width: 768px) {
+              .approach-container {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  padding: 20px;
+              }
+  
+              .center-circle {
+                  order: -1;
+                  margin-bottom: 20px;
+                  width: 180px;
+                  height: 180px;
+                  border: 3px solid #000;
+                  border-radius: 50%;
+              }
+  
+              .approach-item::before {
+                  content: '';
+                  width: 2px;
+                  height: 40px;
+                  background: black;
+                  position: absolute;
+                  left: 50%;
+                  top: -40px;
+                  transform: translateX(-50%);
+              }
+          }
+      </style> 
+  
+  </style>
 </head>
 
 <body>
@@ -68,69 +165,35 @@
       </div>
     </header>
     <!-- end header section -->
-    <!-- slider section -->
-    <section class=" slider_section position-relative">
+     <!-- slider section -->
+     <section class=" slider_section position-relative">
       <div class="container-fluid">
-        <div id="carouseltopbanner" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouseltopbanner" data-slide-to="0" class="active"></li>
-            <li data-target="#carouseltopbanner" data-slide-to="1"></li>
-            <li data-target="#carouseltopbanner" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active" id="s1">
-              <div class="row">
-                <div class="col">
-                  <div class="detail-box">
-                    <div>
-                      <h2>
-                        A masterpiece is created
-
-                      </h2>
-                      <!-- <h1>
-                        web agency
-                      </h1>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                      </p> -->
-                       
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div id="carouseltopbanner2" class="owl-carousel  owl-theme">
+          <div class="item">
+            <div class="owl-text-overlay ">
+              <h2 class="owl-title"> A masterpiece is created</h2>
             </div>
-            <div class="carousel-item"  id="s2">
-              <div class="row">
-                <div class="col">
-                  <div class="detail-box">
-                    <div>
-                      <h2>
-                       Not just from an idea
-
-                      </h2>
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item"  id="s3">
-              <div class="row">
-                <div class="col">
-                  <div class="detail-box">
-                    <div>
-                      <h2>
-                        But how you execute it
-
-                      </h2>
-                       
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+              <img class="owl-img" src="images/slide1.png">
+            
           </div>
+          <div class="item">
+            <div class="owl-text-overlay ">
+              <h2 class="owl-title"> Not just from an idea</h2>
+            </div>
+              <img class="owl-img" src="images/slide2.png">
+            
+          </div>
+          <div class="item">
+            <div class="owl-text-overlay ">
+              <h2 class="owl-title"> But how you execute it</h2>
+            </div>
+              <img class="owl-img" src="images/slide3.png">
+            
+          </div>
+           
+             
+             
+           
         </div>
 
       </div>
@@ -214,6 +277,7 @@
       </div> 
         <div class="collapse" id="collapseserv1" data-bs-parent="#services">
           <div class="card card-body p-4">
+            <h4 style="font-weight: 600;">Corporate Events</h4>
             <p>
               "The Pittch" empowers organizations to engage, reward, motivate, inaugurate, and celebrate with purpose. Whether launching a product, marking a milestone, or hosting an industry conference, we bring unmatched expertise and creativity to each occasion.
             </p>
@@ -226,6 +290,7 @@
         </div>
         <div class="collapse" id="collapseserv2" data-bs-parent="#services">
           <div class="card card-body p-4">
+            <h4 style="font-weight: 600;">Virtual & Hybrid</h4>
             <p>
               In a landscape where markets, trends, and customer behaviors are constantly evolving, we stand as your premier Digital Experience Partner. Utilizing state-of-the-art digital tools and platforms, we craft seamless end-to-end solutions tailored to your needs.
   From captivating webinars and live-streamed shows to meticulously curated pre-recorded content and bespoke microsites, we transform your vision into reality. Our expertise extends to creating immersive virtual venues, where dynamic visual effects such as augmented reality seamlessly enhance presentations and performances.
@@ -235,6 +300,7 @@
         </div>
         <div class="collapse" id="collapseserv3" data-bs-parent="#services">
           <div class="card card-body p-4">
+            <h4 style="font-weight: 600;">Brand narrative</h4>
             <p>
               At the heart of our operation lies a dedicated team of brand strategists and content developers, committed to unravelling your brand story and ensuring it resonates with the right audience. With meticulous attention to detail, we craft bespoke solutions that have propelled brands to new heights, amplifying their presence across print, outdoor, ambient, and digital marketing channels.
             </p>
@@ -245,6 +311,7 @@
         </div>
         <div class="collapse" id="collapseserv4" data-bs-parent="#services">
           <div class="card card-body p-4">
+            <h4 style="font-weight: 600;">Grand-Scale Events</h4>
             <p>
               With us, extraordinary events come to life, redefining the boundaries of spectacle and setting new benchmarks in experiential excellence. From iconic outdoor spectacles and mesmerizing theatricals to electrifying musical concerts, we specialize in crafting unforgettable moments that captivate audiences worldwide.
               </p>
@@ -257,6 +324,7 @@
         </div>
         <div class="collapse" id="collapseserv5" data-bs-parent="#services">
           <div class="card card-body p-4">
+            <h4 style="font-weight: 600;">MICE</h4>
             <p>
               At The Pittch, our team of experts is dedicated to providing you and your guests with a seamless and unforgettable experience, whether it's for business or leisure. From domestic retreats to global adventures, we immerse travellers in the richness of local culture, ensuring every moment is personalized and exclusive.</p>
             <p> With our network of dedicated travel experts, hospitality partners, local transport managers, and brand teams, we curate experiences that go beyond expectations, creating memories that last a lifetime. Let us take care of every detail, so you can focus on making the most of your journey with us.
@@ -267,7 +335,106 @@
     </div>
   </section>
 
-  <!-- end do section -->
+ 
+  <section class="do_section "  >
+    <div class="container ">
+      <div class="heading_container">
+        <h2>Our Approach</h2>
+      </div>
+      <div class="approach-container">
+          <div class="center-circle ">
+              <h3>THE <span class="highlight">PERFECT</span> PITTCH</h3>
+          </div>
+  
+          <div class="approach-item">
+              <h3>Strategy is the <span class="highlight">Heart</span></h3>
+              <p>Aligning experience and communication with data-driven decisions for brand&nbsp;building.</p>
+          </div>
+  
+          <div class="approach-item">
+              <h3>Execution is the <span class="highlight">Mind</span></h3>
+              <p>Meticulous planning to ensure seamless translations and maximize investment value.</p>
+          </div>
+  
+          <div class="approach-item">
+              <h3>Creative is the <span class="highlight">Soul</span></h3>
+              <p>Creativity that unites people and brands, prioritizing warm connections.</p>
+          </div>
+  
+          <div class="approach-item">
+              <h3>Experience is the <span class="highlight">Body</span></h3>
+              <p>Over 50 years of expertise ensures better project analysis and corrective measures.</p>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- end do section --> 
+
+  <section class="do_section usps text-white text-center"  >
+    <div class="container px-4 px-lg-5">
+        <div class="heading_container heading_container2">
+            <h2>Our Key Services</h2>
+        </div>
+        <div class="row rown gx-4 gx-lg-5">
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                <span class="service-icon rounded-circle mx-auto mb-3"><i class="fa-solid fa-user-tie"></i></span>
+                <h4><strong>Corporate and Intellectual Events</strong></h4>
+                <p class="text-faded mb-0 "  > 
+                  Product & Brand launches <br/>
+                  Award Ceremonies<br/>
+                  Automobile Drives <br/>
+                  Concert / IP’s <br/>
+                  Expo stands</p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+                <span class="service-icon rounded-circle mx-auto mb-3"><i class="fa-regular fa-pen-to-square"></i></span>
+                <h4><strong>Creative and Design Services 
+                </strong></h4>
+                <p class="text-faded mb-0">Conceptualization <br/>
+                  2D | 3D Design<br/>
+                  Videography <br/> Photography 
+                  </p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 mb-md-0">
+                <span class="service-icon rounded-circle mx-auto mb-3"><i class="fa-solid fa-masks-theater"></i></span>
+                <h4><strong>International and Local  Artist Bookings 
+                </strong></h4>
+                <p class="text-faded mb-0">
+                  Performers & Talent <br/>
+                  Shows and Permits 
+                  
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <span class="service-icon rounded-circle mx-auto mb-3"><i class="fa-solid fa-palette"></i></span>
+                <h4><strong>Print and Production 
+                </strong></h4>
+                <p class="text-faded mb-0">Collaterals<br/>
+                  Giveaways<br/>
+                  Gratifications
+                  </p>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                  <span class="service-icon rounded-circle mx-auto mb-3"><i class="fa-solid fa-bolt-lightning"></i></span>
+                  <h4><strong>Sound, Lights and Visual Effects 
+                  </strong></h4>
+                  <p class="text-faded mb-0">Avant- Garde lighting and sound solutions  
+                  </p>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <span class="service-icon rounded-circle mx-auto mb-3"><i class="fa-solid fa-clipboard-list"></i></span>
+                <h4><strong>Venue Operation and Management 
+                </strong></h4>
+                <p class="text-faded mb-0">Fabrication & On-ground Production  <br/>
+                  Event Operations & Logistics<br/>
+                  Talent Management Services
+                  </p>
+            </div>
+        </div>
+    </div>
+</section>
 
  
   <!-- info section -->
@@ -357,28 +524,28 @@
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/scripts.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="js/scripts.js"></script>
   <!-- owl carousel script 
     -->
-  <script type="text/javascript">
-    $(".owl-carousel").owlCarousel({
-      loop: true,
-      margin: 0,
-      navText: [],
-      center: true,
-      autoplay: true,
-      autoplayHoverPause: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        1000: {
-          items: 3
-        }
-      }
+    <script> 
+      $(document).ready(function(){
+      $("#carouseltopbanner2").owlCarousel({
+        loop:true,
+        margin:10,
+        responsiveClass:true,
+        navigation: true, 
+        pagination: true,
+        dots: true,
+        autoplay:true,
+        autoplayTimeout:2000,
+        items: 1,
+        singleItem: true,
+        navText : ["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"]
+         
     });
-  </script>
+    });
+     </script>
   <!-- end owl carousel script -->
 
 </body>

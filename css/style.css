@@ -28,6 +28,11 @@ body {
   padding-bottom: 75px;
 }
 
+.text_red
+{
+  color: #ef4237;
+}
+
 .heading_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,6 +60,14 @@ body {
   height: 1px;
   background-color: #fec016;
 }
+.heading_container2 h2::before, .heading_container2 h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 1px;
+  background-color: #222222;
+}
 
 .heading_container h2::before {
   left: -5px;
@@ -76,6 +89,12 @@ body {
   background-size: cover;
 }
 
+#carouseltopbanner .owl-text-overlay
+{
+  border: 1px solid rgb(255, 215, 0, 0.1);
+  background: rgba(0, 0, 0, 0.3);
+
+}
 .sub_page .hero_area {
   height: auto;
 }
@@ -311,7 +330,7 @@ background-position: center center;
   opacity: 1;
 }
 
-.do_section .heading_container {
+.do_section .heading_container , .app_section  .heading_container  {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -392,6 +411,64 @@ background-position: center center;
   background-image: url(../images/arrow-end.png);
 }
 
+ .app_section 
+ {
+  background-color: rgba(34, 34, 34, 0.1);
+  padding: 50px 0;
+ }
+ .app_section h4
+ {
+  font-weight: 600;
+ }
+
+ .app_section .c2
+ {
+  padding: 20px;
+  border-radius: 50%;
+  border:1px dotted #f7a6a1 ;
+ }
+
+ .rown
+ { 
+  padding: 30px 0;
+ }
+
+ 
+.owl-img {
+  width: 100%;
+  
+  height: 600px;
+}
+
+.owl-text-overlay {
+  position: absolute;
+  text-align: center;
+  width: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6);
+  
+  font-family: "Open Sans", sans-serif;
+  border-radius: 15px;
+}
+
+h2.owl-title {
+  margin-bottom: 0;
+  padding: 20px;
+  
+}
+
+
+
+.owl-theme .owl-controls .owl-page span:active {
+  background: #fff !important;
+}
 .who_section .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -879,11 +956,32 @@ background-position: center center;
 {
   color: #000;
 }
+
+.service-icon {
+  margin-top: 30px;
+  background-color: #fff;
+  color: #1D809F;
+  height: 6rem;
+  width: 6rem;
+  display: block;
+  line-height: 6rem;
+  font-size: 2.25rem;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.text-faded {
+  color: rgba(255, 255, 255, 0.8);
+}
+.usps
+{
+  background : #e0bf00;
+  padding: 40px 0;
+}
 @media (min-width: 992px) {
 
   .do_section .collapse, .do_section  .collapsing
   {
-    max-width: 75vw;
+    max-width: 70vw;
     margin: auto;
     margin-top: 30px;
 
