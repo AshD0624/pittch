@@ -31,97 +31,7 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
   <style>
-    .approach-container {
-              display: grid;
-              grid-template-columns: max-content;
-              gap: 15px;
-              padding: 40px 10px;
-              justify-items: center;
-              align-items: center;
-              position: relative;
-          }
-  
-          .center-circle {
-              grid-column: span 4;
-              
-              display: flex;
-              align-items: center;
-              justify-content: center;
-             
-              font-weight: bold;
-              text-transform: uppercase;
-              background: white;
-              transition: transform 0.3s ease-in-out;
-              animation: fadeIn 1s ease-in-out;
-          }
-  
-          .center-circle:hover {
-              transform: scale(1.15);
-          }
-          
-          .service-icon:hover {
-              transform: scale(1.15);
-          }
 
-          .highlight { color: red; }
-  
-          .approach-item {
-              width: 250px;
-              max-width: 100%;
-              text-align: center;
-              padding:25px 15px;
-              background: white;
-              border-radius: 10px;
-              box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-              opacity: 0;
-              transform: translateY(20px);
-              animation: fadeInUp 1s ease-in-out forwards;
-          }
-  
-          .approach-item:nth-child(2) { animation-delay: 0.3s; }
-          .approach-item:nth-child(3) { animation-delay: 0.6s; }
-          .approach-item:nth-child(4) { animation-delay: 0.9s; }
-          .approach-item:nth-child(5) { animation-delay: 1.2s; }
-  
-          @keyframes fadeIn {
-              from { opacity: 0; }
-              to { opacity: 1; }
-          }
-  
-          @keyframes fadeInUp {
-              from { opacity: 0; transform: translateY(20px); }
-              to { opacity: 1; transform: translateY(0); }
-          }
-  
-          /* Mobile View */
-          @media (max-width: 768px) {
-              .approach-container {
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  padding: 20px;
-              }
-  
-              .center-circle {
-                  order: -1;
-                  margin-bottom: 20px;
-                  width: 180px;
-                  height: 180px;
-                  border: 3px solid #000;
-                  border-radius: 50%;
-              }
-  
-              .approach-item::before {
-                  content: '';
-                  width: 2px;
-                  height: 40px;
-                  background: black;
-                  position: absolute;
-                  left: 50%;
-                  top: -40px;
-                  transform: translateX(-50%);
-              }
-          }
       </style> 
   
   </style>
@@ -335,39 +245,69 @@
     </div>
   </section>
 
- 
-  <section class="do_section "  >
-    <div class="container ">
-      <div class="heading_container">
-        <h2>Our Approach</h2>
+    <!-- Approach Section -->
+    <section class="do_section page-section app_sec"  style="padding: 40px 0;" >
+      <div class="container ">
+          <div class="heading_container ">
+              <h2 class="section-heading text-uppercase" style="margin-bottom: 1rem;">Our Approach
+              </h2>
+          </div>
+          <ul class="timeline">
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                    <h4><b>
+                      THE <br/><span class="highlight">PERFECT</span> <br/> PITTCH</b>
+                    </h4>
+                </div>
+              </li>
+              <li>
+                  <div class="timeline-image"><img class="rounded-circle img-fluid" src=" "   /></div>
+                  <div class="timeline-panel">
+                      <div class="timeline-heading">
+                          <h4>Strategy is the <span class="highlight">Heart</span></h4>
+                           
+                      </div>
+                      <div class="timeline-body"><p>Aligning experience and communication with data-driven decisions for brand&nbsp;building.
+                      
+                      </p></div>
+                  </div>
+              </li>
+              <li class="timeline-inverted">
+                  <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
+                  <div class="timeline-panel">
+                      <div class="timeline-heading">
+                          <h4>Execution is the <span class="highlight">Mind</span></h4>
+                      </div>
+                      <div class="timeline-body"><p >Meticulous planning to ensure seamless translations and maximize investment&nbsp;value.
+
+                      </p></div>
+                  </div>
+              </li>
+              <li>
+                  <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
+                  <div class="timeline-panel">
+                      <div class="timeline-heading">
+                          <h4>Creative is the <span class="highlight">Soul</span></h4>
+                      </div>
+                      <div class="timeline-body"><p >Creativity that unites people and brands, prioritizing warm&nbsp;connections.
+
+                      </p></div>
+                  </div>
+              </li>
+              <li class="timeline-inverted">
+                  <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." /></div>
+                  <div class="timeline-panel">
+                      <div class="timeline-heading">
+                          <h4>Experience is the <span class="highlight">Body</span></h4>
+                      </div>
+                      <div class="timeline-body"><p  >Over 50 years of expertise ensures better project analysis and corrective&nbsp;measures. </p></div>
+                  </div>
+              </li>
+          </ul>
       </div>
-      <div class="approach-container">
-          <div class="center-circle ">
-              <h3>THE <span class="highlight">PERFECT</span> PITTCH</h3>
-          </div>
-  
-          <div class="approach-item">
-              <h3>Strategy is the <span class="highlight">Heart</span></h3>
-              <p>Aligning experience and communication with data-driven decisions for brand&nbsp;building.</p>
-          </div>
-  
-          <div class="approach-item">
-              <h3>Execution is the <span class="highlight">Mind</span></h3>
-              <p>Meticulous planning to ensure seamless translations and maximize investment value.</p>
-          </div>
-  
-          <div class="approach-item">
-              <h3>Creative is the <span class="highlight">Soul</span></h3>
-              <p>Creativity that unites people and brands, prioritizing warm connections.</p>
-          </div>
-  
-          <div class="approach-item">
-              <h3>Experience is the <span class="highlight">Body</span></h3>
-              <p>Over 50 years of expertise ensures better project analysis and corrective measures.</p>
-          </div>
-      </div>
-    </div>
   </section>
+  <!-- end approach section -->
+  
   
 
   <!-- end do section --> 
