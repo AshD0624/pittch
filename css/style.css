@@ -99,8 +99,8 @@ p{
 
 #carouseltopbanner .owl-text-overlay
 {
-  border: 1px solid rgb(255, 215, 0, 0.1);
-  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgb(255, 215, 0, 0.05);
+  background: rgba(0, 0, 0, 0.1);
 
 }
 .sub_page .hero_area {
@@ -584,6 +584,22 @@ h2.owl-title {
 
 /* Mobile View */
 @media (max-width: 768px) {
+  .owl-text-overlay
+  {
+    width: 85%;
+  }
+  .custom_nav-container
+  {
+  background: #222222;
+  }
+  .nav-item
+  {
+    padding-bottom: 10px;
+  }
+  .navbar-brand img
+  {
+    align-items: center;
+  }
   /* #about .approach-container {
       display: flex;
       flex-direction: column;
@@ -1176,6 +1192,7 @@ h2.owl-title {
   #carouselportfolio .card img {
     height: 11em;
   }
+  
 }
 
 #services
