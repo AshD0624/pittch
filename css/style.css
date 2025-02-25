@@ -797,7 +797,7 @@ h2.owl-title {
   border-radius: 20px;
 }
 
-.contact_section .contact-form input {
+.contact_section .contact-form input , .contact_section .contact-form textarea {
   border: none;
   outline: none;
   background-color: transparent;
@@ -1292,6 +1292,7 @@ h2.owl-title {
 @media (min-width: 768px) {
   .timeline:before {
     left: 49%;
+    height: 90%;
   }
   .timeline > li {
     min-height: 100px;
